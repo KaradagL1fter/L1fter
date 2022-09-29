@@ -1,26 +1,253 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap);
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --blue: #00a733;
+  --red: #cccccc;
+  --white: #fffdfa;
 }
-
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body a {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+body {
+  /* border: 5px solid green; */
+  color: white;
+  font-family: 'Raleway';
+  letter-spacing: 2px;
+  background: #fffdfa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+  font-weight: 100;
+  letter-spacing: 4px;
+  padding-bottom: 1vh;
+}
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Button  */
+.classicButton {
+  color: #cccccc;
+  background: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  width: fit-content;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  border: 1px solid var(--blue);
+  text-align: center;
+}
+.classicButton:hover {
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px var(--blue),
+    0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue);
+  background: var(--blue);
+}
+.classicButton:active {
+  text-decoration: underline;
+}
+/* SignupButton  */
+.signUpButton {
+  padding: 0.5rem 1rem;
+  color: var(--red);
+  background: var(--white);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  width: 130px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px 2px #cccccc;
+}
+.second {
+  color: var(--blue);
+  /* font-size: 20px; */
+}
+
+.signUpButton:hover {
+  background: var(--blue);
+}
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background: var(--blue); /* WebKit/Blink Browsers */
+}
+/* TAbLe -------------------------------------------------------*/
+
+table {
+  border-collapse: collapse;
+  min-width: 250px;
+  max-width: 800px;
+}
+
+/* Zebra striping */
+table tbody {
+  display: block;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+td,
+th {
+  border-right: 1px solid var(--blue);
+}
+table thead,
+table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+
+  text-align: left;
+  font-size: 18px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .tableCharts_tableCont__EiQ8_ > table {
+    width: 100%;
   }
-  body {
+  .tableCharts_tableCont__EiQ8_ > td {
     color: white;
-    background: black;
+  }
+  /* Force table to not be like tables anymore */
+  .tableCharts_tableCont__EiQ8_ > table,
+  .tableCharts_tableCont__EiQ8_ > thead,
+  .tableCharts_tableCont__EiQ8_ > tbody,
+  .tableCharts_tableCont__EiQ8_ > th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: white;
+    font-weight: bold;
+  }
+}
+.active {
+  color: var(--blue);
+}
+.active_toggle {
+  font-size: 20px;
+}
+@media only screen and (max-width: 550px) {
+  .tableCharts_tableCont__EiQ8_ > table tr td {
+    font-size: 12px;
+  }
+  .tableCharts_tableCont__EiQ8_ > table tbody {
+    overflow-x: hidden;
+  }
+  .table_tableCont__TvDeT > table tr td {
+    font-size: 12px;
+  }
+  .table_tableCont__TvDeT > table tbody {
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .tableCharts_tableCont__EiQ8_ > table tr td {
+    font-size: 10px;
+  }
+  .table_tableCont__TvDeT > table tr td {
+    font-size: 10px;
   }
 }

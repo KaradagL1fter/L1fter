@@ -1,0 +1,44 @@
+.layoutCont {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.mainSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+}
+.mainContent {
+  width: 100%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.yoo {
+  color: white;
+}
+.bannerCont {
+  display: flex;
+  flex-direction: column;
+}
+.footerWerbungMob {
+  display: none;
+  margin-top: 5vh;
+}
+@media screen and (max-width: 1026px) {
+  .footerWerbungMob {
+    display: flex;
+  }
+  .mainSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10vw;
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.reset {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: none;
+  padding: 30px;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.reset__textBox {
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.reset__btn {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  background: none;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.reset__btn:hover {
+  background-color: var(--blue);
+  box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px var(--blue),
+    0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue);
+}
+
+.reset div {
+  margin-top: 7px;
+  color: white;
+}

@@ -1,0 +1,119 @@
+.HomeCont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4,
+.pimg5 {
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 10vh 10vw;
+  color: var(--blue);
+}
+.border .after {
+  position: absolute;
+  display: block;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 5;
+}
+.pimg1 {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* min-height: 85vh; */
+}
+.pimg1::before,
+.pimg2::before,
+.pimg3::before,
+.pimg4::before,
+.pimg5::before {
+  content: '';
+  /* background-image: url('../public/static/tvtower.jpg'); */
+  background-attachment: fixed;
+  background-position: 25%;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* opacity: 0.5; */
+}
+.pimg1::before {
+  background-attachment: fixed;
+  background-image: url('../public/static/tvtower.jpg');
+}
+.pimg2::before {
+  background-image: url('../public/static/city.jpg');
+}
+.pimg3::before {
+  background-image: url('../public/static/archtiec.jpg');
+}
+.pimg4::before {
+  background-image: url('../public/static/mall.jpg');
+}
+.pimg5::before {
+  background-image: url('../public/static/reichstag.jpg');
+}
+.pimg2 {
+  min-height: 400px;
+}
+.pimg3 {
+  min-height: 400px;
+}
+.pimg4 {
+  min-height: 400px;
+}
+.pimg5 {
+  min-height: 400px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 10vw;
+  color: var(--blue);
+}
+.sectionDark {
+  background-color: var(--red);
+  color: var(--white);
+}
+.sectionLight {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  color: var(--red);
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+}
+.firstCol h1 {
+  color: black;
+}
+.buttonGroup {
+  display: flex;
+  width: 30%;
+  /* border: 1px solid green; */
+  justify-content: space-between;
+}
+.signUpButton {
+  background: #cccccc;
+  margin: 0;
+}

@@ -1,0 +1,194 @@
+.NavCont {
+  width: 100%;
+  display: flex;
+  height: 15vh;
+  padding: 0 160px;
+  align-items: center;
+  background: none;
+  z-index: 200;
+}
+.NavMainMenu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:200|Raleway:400,100);
+
+.NavMainMenuLinks {
+  display: flex;
+
+  height: auto;
+  align-content: center;
+  flex-direction: row;
+}
+.NavMainMenuLinks a {
+  padding: 1vh 1vw;
+  transition: 0.5s;
+}
+.NavMainMenuLinks a:hover {
+  color: var(--blue);
+}
+
+.NavMainMenuLinks p,
+.ToggleMenuLinksCont p {
+  color: #fff;
+  font-family: 'Lato';
+  font-weight: 100;
+  letter-spacing: 4px;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.ToggleMenuLinksCont p {
+  margin: 0;
+}
+.Nav-sign button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: var(--red);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ToggleMenuCont {
+  margin-left: 1rem;
+  z-index: 20;
+  display: none;
+  position: relative;
+}
+
+.ToggleMenuCont svg {
+  cursor: pointer;
+}
+
+.ToggleMenuLinksCont {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  position: absolute;
+  right: 0;
+  top: 40px;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ToggleMenuLinksCont p {
+  margin: 1rem 0;
+}
+
+#logo {
+  width: 400px;
+}
+
+.NavUserCont {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+.NavUserName {
+  text-transform: uppercase;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.userPic {
+  border-radius: 50%;
+  width: 50px;
+}
+.NavUserTextCont {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.logout {
+  cursor: pointer;
+  font-size: 12px;
+}
+.logoutButton {
+  margin-left: 5px;
+}
+@media screen and (max-width: 1026px) {
+  .NavCont {
+    padding: 0 10vw;
+  }
+}
+@media screen and (max-width: 1250px) {
+  #logo {
+    width: 350px;
+  }
+  .NavMainMenuLinks {
+    display: none;
+  }
+
+  .ToggleMenuCont {
+    display: flex;
+  }
+  .userPic {
+    width: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .userPic {
+    width: 40px;
+  }
+  #logo {
+    width: 250px;
+  }
+  .Nav {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .userPic {
+    width: 35px;
+  }
+  .Nav {
+    padding: 2rem;
+  }
+  .NavMainMenuLinks {
+    display: none;
+  }
+
+  .Nav-menu_container {
+    top: 20px;
+  }
+
+  .Nav-menu_container-links-sign {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+}
+
+@media screen and (max-width: 300px) {
+  .userPic {
+    width: 30px;
+  }
+  .Nav {
+    padding: 2rem;
+  }
+
+  .Nav-menu_container {
+    top: 20px;
+  }
+
+  .Nav-menu_container-links-sign {
+    display: block;
+  }
+}

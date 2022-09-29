@@ -1,0 +1,88 @@
+.Nav-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Nav-sign p {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: capitalize;
+
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.NavUserCont {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+.NavUserName {
+  text-transform: uppercase;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.userPic {
+  border-radius: 50%;
+  width: 50px;
+}
+.NavUserTextCont {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.logout {
+  cursor: pointer;
+  font-size: 12px;
+}
+.logoutButton {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1250px) {
+  .userPic {
+    width: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .userPic {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .userPic {
+    width: 35px;
+  }
+
+  .Nav-menu_container-links-sign {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Nav-sign p,
+  .Nav-sign button {
+    font-size: 12px;
+    padding: 0.5vh 0.5vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .userPic {
+    width: 30px;
+  }
+
+  .Nav-sign p,
+  .Nav-sign button {
+    font-size: 10px;
+  }
+
+  .Nav-menu_container-links-sign {
+    display: block;
+  }
+}

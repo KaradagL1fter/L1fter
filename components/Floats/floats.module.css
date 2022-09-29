@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.Floats {
+  /* font-family: 'Bangers', cursive; */
+  color: var(--red);
+  margin: 1vh 1vw;
+  font-size: 25px;
+  z-index: 100;
+}
+.FloatsCont {
+  /* background-color: wheat; */
+  display: flex;
+  /* border: 5px solid black; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 100;
+}
