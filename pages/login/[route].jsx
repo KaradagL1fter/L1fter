@@ -116,7 +116,7 @@ function Login() {
           </div>
 
           <p className={styles['forget']}>
-            Passwort vergessen ?{' '}
+            Passwort vergessen ??{' '}
             <Link href='/reset'>
               <a style={{ textDecoration: 'underline' }}>Klicke hier</a>
             </Link>
